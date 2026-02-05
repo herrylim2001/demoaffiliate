@@ -2,6 +2,42 @@
 
 Demo prototype sistem affiliate dan bonus berdasarkan Functional Specification Document v1.0.
 
+## Web Application (Client Showcase)
+
+Interactive web-based prototype untuk presentasi ke client.
+
+### Quick Start
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run web app
+cd /home/user/demoaffiliate
+streamlit run webapp/app.py
+```
+
+Buka browser ke `http://localhost:8501`
+
+### Web App Features
+
+- **Dashboard** - Overview dengan key metrics dan visualisasi
+- **Affiliates** - Kelola affiliate, lihat tree structure, buat affiliate baru
+- **Commission** - Kalkulator komisi interaktif, DSR simulator (Flat vs Non-Flat)
+- **Bonus** - Issue dan kelola bonus (Deposit, Rakeback, Cashback, Special)
+- **Reports** - Commission statements dan bonus reports dengan export CSV
+
+### Screenshots
+
+Web app menampilkan:
+- Real-time commission calculation
+- Interactive DSR tier configuration
+- Bonus lifecycle management
+- Affiliate network visualization
+- Export reports to CSV
+
+---
+
 ## Features
 
 ### Affiliate Module
@@ -31,6 +67,15 @@ Demo prototype sistem affiliate dan bonus berdasarkan Functional Specification D
 
 ```
 demoaffiliate/
+├── webapp/                   # Web Application (Streamlit)
+│   ├── app.py               # Main app entry point
+│   ├── state.py             # Session state & demo data
+│   └── pages/
+│       ├── dashboard.py     # Dashboard overview
+│       ├── affiliates.py    # Affiliate management
+│       ├── commission.py    # Commission calculator
+│       ├── bonus.py         # Bonus management
+│       └── reports.py       # Reports & analytics
 ├── src/
 │   ├── models/
 │   │   ├── affiliate.py     # Affiliate, CommissionPlan, DSRTier
@@ -45,7 +90,7 @@ demoaffiliate/
 │   └── utils/
 │       └── enums.py         # All enums and constants
 ├── demo/
-│   └── run_demo.py          # Comprehensive demo runner
+│   └── run_demo.py          # CLI demo runner
 ├── tests/
 │   ├── test_commission.py   # Commission calculation tests
 │   └── test_bonus.py        # Bonus system tests
