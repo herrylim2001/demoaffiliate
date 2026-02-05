@@ -1,8 +1,10 @@
 # Affiliate & Bonus System Demo
 # Python 3.8+ required
 
-# No external dependencies required for core functionality
-# The system uses only Python standard library
+# Web UI
+streamlit>=1.30.0
+plotly>=5.18.0
+pandas>=2.0.0
 
 # Development dependencies (optional)
 pytest>=7.0.0
